@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Political Preparedness</string>
+    <string name="find_my_representatives">FIND MY REPRESENTATIVES</string>
+    <string name="upcoming_election">UPCOMING ELECTIONS</string>
+    <string name="saved_election">Saved Election</string>
+    <string name="upcomingelection">Upcoming Election</string>
+    <string name="voter_remove_from_saved">Unfollow Election</string>
+    <string name="voter_add_to_saved">Follow Election</string>
+    <string name="address">Address</string>
+
+    <string name="voting_location">&lt;a href="%s">Voting locations&lt;/a></string>
+    <string name="ballot_information">&lt;a href="%s">Ballot information&lt;/a></string>
+    <string name="error_failed_get_address_from_location">Get Address from location</string>
+
+    <string name="hint_address_line1">Address Line1</string>
+    <string name="hint_address_line2">Address Line2</string>
+    <string name="hint_city">City</string>
+    <string name="hint_zip">ZipCode</string>
+    <string name="representative_search">Representative Search</string>
+    <string name="my_representatives_header">My Representatives</string>
+    <string name="content_desc">%s from %s</string>
+    <string name="content_desc_facebook">%s facebook page</string>
+    <string name="content_desc_twitter">%s twitter page</string>
+    <string name="content_desc_www">%s web page</string>
+    <string name="election_information"><u>Election Information:</u></string>
+    <string name="use_my_location">Use My Location</string>
+
+
+    <!-- TODO: Add necessary string values -->
+
+</resources>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.text.Html" />
+        <variable
+            name="viewModel"
+            type="com.example.android.politicalpreparedness.election.VoterInfoViewModel" />
+        <variable
+            name="dateFormatter"
+            type="java.text.DateFormat" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/electionNameToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@color/colorPrimaryDark"
+            android:padding="8dp"
+            android:singleLine="true"
+            app:layout_constraintTop_toTopOf="parent"
+            app:title="@{viewModel.election.name}"
+            android:textSize="18sp"
+            app:titleTextColor="@color/white"
+            tools:title="Election Name" />
+
+        <TextView
+            android:id="@+id/electionDateTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/default_padding"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/gray50"
+            android:text="@{dateFormatter.format(viewModel.election.electionDay)}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.054"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/electionNameToolbar"
+            tools:text="12 November 2055" />
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="30dp"
+            android:text="@string/election_information"
+            android:textSize="20sp"
+            android:textColor="@color/gray50"
+            app:layout_constraintBottom_toTopOf="@+id/stateLocations"
+            app:layout_constraintEnd_toStartOf="@+id/stateHeader"
+            app:layout_constraintHorizontal_bias="0.446"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/electionDateTextView"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/stateHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="208dp"
+            android:layout_marginTop="12dp"
+            android:text="@{viewModel.electionDetails.name}"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@id/electionDateTextView"
+            app:layout_constraintTop_toBottomOf="@id/electionDateTextView"
+            tools:text="State Name" />
+
+        <TextView
+            android:id="@+id/stateLocations"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@{Html.fromHtml(@string/voting_location(viewModel.electionDetails.electionAdministrationBody.votingLocationFinderUrl), Html.FROM_HTML_MODE_LEGACY)}"
+            android:textColorLink="@color/gray50"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@id/stateHeader"
+            tools:text="Voting Location" />
+
+        <TextView
+            android:id="@+id/stateBallot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@{Html.fromHtml(@string/ballot_information(viewModel.electionDetails.electionAdministrationBody.ballotInfoUrl), Html.FROM_HTML_MODE_LEGACY)}"
+            android:textColorLink="@color/gray50"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/stateLocations"
+            app:layout_constraintTop_toBottomOf="@id/stateLocations"
+            tools:text="Ballot Information" />
+
+        <Button
+            android:id="@+id/voterFollowOrUnfollowButton"
+            voterFollowOrUnfollowLabel="@{viewModel.saved}"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="?colorPrimary"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
