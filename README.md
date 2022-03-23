@@ -1,4 +1,5 @@
-Political Preparedness
+****Political Preparedness****
+
 PolitcalPreparedness is an example application built to demonstrate core Android Development skills as presented in the Udacity Android Developers Kotlin curriculum.
 
 This app demonstrates the following views and techniques:
@@ -7,16 +8,18 @@ Retrofit to make api calls to an HTTP web service.
 Moshi which handles the deserialization of the returned JSON to Kotlin data objects.
 Glide to load and cache images by URL.
 Room for local database storage.
-It leverages the following components from the Jetpack library:
 
-ViewModel
+****ViewModel****
 LiveData
 Data Binding with binding adapters
 Navigation with the SafeArgs plugin for parameter passing between fragments
 Setting up the Repository
 To get started with this project, simply pull the repository and import the project into Android Studio. From there, deploy the project to an emulator or device.
 
-NOTE: In order for this project to pull data, you will need to add your API Key to the project as a value in the CivicsHttpClient. You can generate an API Key from the Google Developers Console
+NOTE: 
+In order for this project to pull data, you will need to add your API Key to the project as a value in the CivicsHttpClient.
+You can generate an API Key from the Google Developers Console
+
 Getting Started
 For the most part, the TODOs in the project will guide you through getting the project completed. There is a general package architecture and most files are present.
 Hints are provided for tricky parts of the application that may extend beyond basic Android development skills.
