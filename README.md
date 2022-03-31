@@ -36,5 +36,10 @@ Begin work on the Voter Info Fragment and associated ViewModel.
 Begin work on the Representative Fragment and associated ViewModel.
 This will require edits to Gradle.
 You will need to create a file to complete the step.
-Report Issues
-Notice any issues with a repository? Please file a github issue in the repository.
+![Screenshot_1648733286](https://user-images.githubusercontent.com/79679552/161072677-e198797e-698a-4a05-aa0c-1a5e9f17b49e.png)
+![Screenshot_1648733309](https://user-images.githubusercontent.com/79679552/161072694-68f27731-3efc-4c29-a354-74b4a4a9c031.png)
+![Screenshot_1648733317](https://user-images.githubusercontent.com/79679552/161072702-4e0e68a6-d3fc-45c3-a80b-e48990924fa5.png)![Screenshot_1648733325](https:/![Screenshot_1648733360](https://user-images.githubusercontent.com/79679552/161072730-8c577fda-12c4-4fb8-abd2-98e71a10f517.png)
+/user-images.githubusercontent.com/79679552/161072713-8a68b371-6fdc-45aa-b286-ac64fda356e1.png)
+![Screenshot_1648733392](https://user-images.githubusercontent.com/79679552/161072745-a11882e9-6649-44a4-a304-f2295c80df51.png)
+
+
